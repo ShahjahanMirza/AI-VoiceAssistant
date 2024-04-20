@@ -14,8 +14,6 @@ def user():
 def main():
 
     print("Setting up the Assistant...")
-    
-    
     print('Ready...')
     
     
