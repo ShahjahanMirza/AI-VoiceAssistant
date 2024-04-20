@@ -15,8 +15,6 @@ def main():
 
     print("Setting up the Assistant...")
     print('Ready...')
-    
-    
         
     while True:
         user_input = user()
@@ -79,24 +77,6 @@ def main():
             print('Model Speaking...')
             speak(response)
         user_input = None
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
