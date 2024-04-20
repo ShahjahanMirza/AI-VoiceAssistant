@@ -1,6 +1,14 @@
 # Voice Assistant
 
 This is a voice assistant application that can perform various tasks through voice commands.
+It is built completely locally. 
+Used:
+Llama3
+Gemma
+Qwen
+Faster Whisper
+Pyaudio
+CrewAI - Later to be used
 
 ## Overview
 
