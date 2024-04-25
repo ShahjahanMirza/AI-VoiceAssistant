@@ -8,8 +8,8 @@ prompt_model = Ollama(model='llama3:8b')
 # prompt_model = Ollama(model='tinyllama')
 code_model = Ollama(model='codegemma:2b')
 
-# groq_api_key = os.environ["GROQ_API_KEY"]
-llm = ChatGroq(api_key='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',
+groq_api_key = os.environ["GROQ_API_KEY"]
+llm = ChatGroq(api_key=groq_api_key,
     model="llama3-70b-8192",)
 
 
