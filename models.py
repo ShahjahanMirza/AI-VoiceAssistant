@@ -29,9 +29,9 @@ def chat_with_groq_llama(text):
 
 
 
-def chat_with_qwen(text):
+def chat_with_phi(text):
 
-    response = ollama.chat(model='qwen:1.8b',
+    response = ollama.chat(model='phi3',
                 messages=[
                     {
                       "role": "system",
