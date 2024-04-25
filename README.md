@@ -1,6 +1,14 @@
 # Voice Assistant
 
 This is a voice assistant application that can perform various tasks through voice commands.
+It is built completely locally. 
+Used:
+Llama3
+Gemma
+Qwen
+Faster Whisper
+Pyaudio
+CrewAI - Later to be used
 
 ## Overview
 
@@ -16,7 +24,8 @@ The main capabilities of the assistant include:
 ## Setup
 
 To run this assistant yourself:
-
+## Pre-requisites:
+> Should have Ollama installed with the models used.
 1. Clone this repository
 2. Install dependencies with `pip install -r requirements.txt`
 3. Run `python main.py`
