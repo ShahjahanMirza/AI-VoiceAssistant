@@ -82,7 +82,7 @@ def chat_with_image(text, image_path):
 
     message = {
         'role': 'user',
-        'content': text,
+        'content': f"Give a very short answer to the following query: {text}",
         'images': [image] 
     }
     
@@ -95,7 +95,7 @@ def chat_with_image(text, image_path):
     return response['message']['content']
 
 # # Usage:
-# image_path = r'G:\Personal Assistant Project\project\shaju.jpg'
+# image_path = r'C:\Users\Shahjahan.DESKTOP-MBDJTPL\Desktop\shaju.png'
 # print(chat_with_image("What is this image about?", image_path))
 
 

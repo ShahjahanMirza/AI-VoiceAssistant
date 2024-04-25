@@ -1,7 +1,7 @@
 # Voice Assistant
 
 This is a voice assistant application that can perform various tasks through voice commands.
-It is built completely locally. 
+It is built completely locally.
 Used:
 Llama3
 Gemma
@@ -24,8 +24,11 @@ The main capabilities of the assistant include:
 ## Setup
 
 To run this assistant yourself:
+
 ## Pre-requisites:
+
 > Should have Ollama installed with the models used.
+
 1. Clone this repository
 2. Install dependencies with `pip install -r requirements.txt`
 3. Run `python main.py`
@@ -35,7 +38,7 @@ To run this assistant yourself:
 
 Here are some example voice commands the assistant can handle:
 
-- "Add information" - Adds spoken information to the knowledge document 
+- "Add information" - Adds spoken information to the knowledge document
 - "Give information" - Triggers the assistant to converse based on the knowledge document
 - "Upload document" - Uploads a document for the assistant to read
 - "Write code" - Generates code based on voice commands
@@ -52,3 +55,5 @@ To customize the assistant's capabilities:
 - Expand the knowledge document and conversation model for more intelligent dialog
 
 There is a lot of room for building on top of this basic framework to create a more versatile voice assistant.
+
+- General Memory can be introduced to store information that can be referenced in future conversations with every model
