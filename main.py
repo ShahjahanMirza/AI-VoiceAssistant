@@ -73,10 +73,13 @@ def main():
         
         # If user just want to chat normally
         else:
-            response = chat_with_qwen(user_input)
+            response = chat_with_groq_llama(user_input)
             print('Model Speaking...')
             speak(response)
         user_input = None
+
+
+
 
 
 

@@ -1,5 +1,32 @@
 import time
 import ollama
+from langchain_groq import ChatGroq
+from dotenv import load_dotenv
+import os
+from groq import Groq
+import io
+
+load_dotenv()
+groq_api_key = os.environ["GROQ_API_KEY"]
+
+def chat_with_groq_llama(text):
+    """
+    Initiates a conversation with a language model.
+    """
+    
+    client = Groq(api_key=groq_api_key)
+
+    chat_completion = client.chat.completions.create(
+        messages=[
+            {   
+                "role": "user",
+                "content": text,
+            }
+        ],
+        model="llama3-70b-8192",
+    )
+    return chat_completion.choices[0].message.content
+
 
 
 def chat_with_qwen(text):
@@ -45,7 +72,6 @@ def chat_with_gemma(text):
 
     return (response['message']['content'])
 
-import io
 
 # Other functions...
 
