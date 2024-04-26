@@ -45,8 +45,8 @@ To run this assistant yourself:
 
 ## Pre-requisites:
 
-> Should have `Ollama` installed with the models used.
-> Set up Google API here: `https://developers.google.com/calendar/api/quickstart/python` and download c`redentials.json`
+> * Should have `Ollama` installed with the models used.
+> * Set up Google API here: `https://developers.google.com/calendar/api/quickstart/python` and download c`redentials.json`
 
 1. Clone this repository
 2. Install dependencies with `pip install -r requirements.txt`
