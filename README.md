@@ -47,6 +47,7 @@ To run this assistant yourself:
 
 > * Should have `Ollama` installed with the models used.
 > * Set up Google API here: `https://developers.google.com/calendar/api/quickstart/python` and download c`redentials.json`
+> * Save `Groq` API key in `.env` from here: `https://console.groq.com/playground`
 
 1. Clone this repository
 2. Install dependencies with `pip install -r requirements.txt`
