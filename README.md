@@ -1,7 +1,9 @@
 # Voice Assistant
 
-This is a voice assistant application that can perform various tasks through voice commands. For example:
-*
+This is a voice assistant application that can perform various tasks through voice commands. 
+> For example: Write code, talk to documents, talk to images, general chat, and many more...
+
+
 It is built completely locally.
 Used:
 Llama3
