@@ -8,7 +8,7 @@ import os.path
 import datetime as dt
 
 audio_save_path = './audios/audio.wav'
-calendar = GoogleCalendar()
+# calendar = GoogleCalendar()
 
 def user():
     listen(audio_save_path=audio_save_path) # User audio to file
@@ -115,33 +115,37 @@ def main():
         elif any(keyword.strip() in user_input.lower() for keyword in ['add event']): # Add Event
             print("What do you want to add: ")
             user_input = user()
-            response = chat_with_groq_llama("Generate ONLY a JSON object to this user query:"+user_input+""". The JSON output should look like this: 
-            {"summary": "Google I/O 2015",
-            "location": "800 Howard St., San Francisco, CA 94103",
-            "description": "A chance to hear more about Google's developer products.",
-            "colorId": 8,
+            response = chat_with_groq_llama("Generate ONLY a JSON object to this user query:" + user_input + """ The JSON output should look like this: 
+            {
+            "summary": "",
+            "location": "",
+            "description": "",
+            "colorId": "6",
             "start": {
-                "dateTime": "2024-04-26T00:01:00+05:00",
-                "timeZone": "Asia/Karachi",
+                "dateTime": "2024-04-27T00:00:00+00:00",
+                "timeZone": "Asia/Karachi"
             },
             "end": {
-                "dateTime": "2024-04-26T23:00:00+05:00",
-                "timeZone': "Asia/Karachi",
+                "dateTime": "2024-05-01T00:00:00+00:00",
+                "timeZone": "Asia/Karachi"
             },
+            "recurrence": [
+                
+            ],
             "attendees": [
-                {"email": "shahjahanmirza007@gmail.com"} 
-            ]
-            }
-            Make sure the JSON response has starting and ending brackets. Dont change timezones, recurrence and attendees. Dont even write Here is the JSON object or anything. ONLY JSON RESPONSE IS REQUIRED. 
-            """)
+                {"email": "03318325446sm@gmail.com"}
+            ] }
+            DONT MISS ANY BRACKETS. Write summary, location, description, and dateTimes from user query. timeZone is Asia/Karachi fixed. Dont change attendees, recurrence, colorId. Dont even write 'Here is the JSON object','Here is the JSON object based on the user query:' or anything else. ONLY JSON RESPONSE IS REQUIRED. 
+                        """)
             print(response)
-            calendar.add_event(response)
+            json_response = json.loads(response)
+            GoogleCalendar().add_event(json_response)
             speak("Event added to google calendar")
         
         
         # If user want to get events from google calendar
         elif any(keyword.strip() in user_input.lower() for keyword in ['get my events']): # Add Event
-            events = calendar.get_events()
+            events = GoogleCalendar().get_events()
             response = chat_with_groq_llama("In a report form, tell me which events do i have and when.  Dont output special characters. use the following events data: " + str(events))
             speak(response)
         
@@ -152,9 +156,6 @@ def main():
             print('Model Speaking...')
             speak(response)
         user_input = None
-
-
-
 
 
 if __name__ == '__main__':

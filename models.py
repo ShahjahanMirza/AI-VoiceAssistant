@@ -18,6 +18,10 @@ def chat_with_groq_llama(text):
 
     chat_completion = client.chat.completions.create(
         messages=[
+            {
+                "role": "system",
+                "content": "You are a helpful assistant, who replies in 2 short sentences. If you dont understand anything, just reply 'i do not understand'.",
+            },
             {   
                 "role": "user",
                 "content": text,
