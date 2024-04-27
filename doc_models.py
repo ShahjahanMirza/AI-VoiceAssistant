@@ -16,7 +16,7 @@ filename = 'info_doc.txt'
 def update_document(text='', prompt = "understand the provided text. Convert and Reply ONLY with the key-points. Dont come up with any material that is not in the provided text", filename=filename):
     if text != '':
         with open("docs/"+filename, "a") as f:
-            f.write('\n\nEvent Added Date: ' + datetime.today().strftime('%B %d, %Y'))
+            f.write('\nEvent Added Date: ' + datetime.today().strftime('%B %d, %Y') + '\n')
             f.write(chat_with_llama(text, prompt))     
         
     paragraphs = parse_file(filename)
