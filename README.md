@@ -79,9 +79,13 @@ To customize the assistant's capabilities:
 - Expand the knowledge document and conversation model for more intelligent dialog
 - so on...
 
+## Improvements
+
 There is a lot of room for building on top of this basic framework to create a more versatile voice assistant.
 
 - General Memory can be introduced to store information that can be referenced in future conversations with every model
 - A lot of repetition is there, that can be fixed
-- Many models are being used, Local and API both, that can be imporoved.
+- Many models are being used, Local and API both, that can be imporoved
+- Prompt Engineering for better responses
+- Functionize things the main file
 - so on...
