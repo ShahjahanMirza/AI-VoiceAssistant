@@ -31,7 +31,7 @@ def write_code(text):
         max_iterations=10,
     )
     
-    return zero_shot_agent.run(f"Write python code for {text}. ONLY output code without any explanation or extra words. Use proper python syntax for output. With new lines and spaces")
+    return zero_shot_agent.run(f"Write  code for {text}. ONLY output code without any explanation or extra words. Use proper  syntax for output. With new lines and spaces")
 # print(write_code("fibonacci series of any given number"))
 
 
@@ -87,3 +87,5 @@ def code_fix():
 #         {'role': 'user', 'content': 'Python code for {text}'}
 #         ]
 #     )
+
+

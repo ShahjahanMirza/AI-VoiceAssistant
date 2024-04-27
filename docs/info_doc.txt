@@ -45,3 +45,10 @@ Here are the key points:
 * Destination: England
 * Purpose: Business meeting
 * Duration: 5 days
+
+Event Added Date: April 27, 2024
+Key points:
+
+* Date of the event: Thursday
+* Activity: Attending a seminar
+* Location: University

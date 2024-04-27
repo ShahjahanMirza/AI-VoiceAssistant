@@ -1,8 +1,8 @@
 # Voice Assistant
 
-This is a voice assistant application that can perform various tasks through voice commands. 
-> For example: Write code, talk to documents, talk to images, general chat, and many more...
+This is a voice assistant application that can perform various tasks through voice commands.
 
+> For example: Write code, talk to documents, talk to images, general chat, and many more...
 
 It is built completely locally.
 Used:
@@ -14,19 +14,20 @@ Pyaudio
 CrewAI - Later to be used
 Groq
 
-*Frame-work used : LangChain
+\*Frame-work used : LangChain
 
 ## Features
-- *Speech Recognition* - Uses PyAudio to record voice input and Whisper for transcription
-- *Text to Speech* - Uses gTTS to read back text
-- *General Conversations* - Uses Llama3 for general conversation
-- *Information Storage* - Can add spoken information to a knowledge document and have conversations based on it
-- *Document Understanding* - Analyzes uploaded documents to extract key information
-- *Image Captioning* - Describes images uploaded by the user
-- *Code Generation* - Creates simple Python code based on voice commands
-- *Fixed Code Files* - Fixes uploaded python files
-- *Internet Search* - Searches the web for queries and reads back results
-- *Calendar Integration* - Adds events to Google Calendar and retrieves upcoming events via API
+
+- _Speech Recognition_ - Uses PyAudio to record voice input and Whisper for transcription
+- _Text to Speech_ - Uses gTTS to read back text
+- _General Conversations_ - Uses Llama3 for general conversation
+- _Information Storage_ - Can add spoken information to a knowledge document and have conversations based on it
+- _Document Understanding_ - Analyzes uploaded documents to extract key information
+- _Image Captioning_ - Describes images uploaded by the user
+- _Code Generation_ - Creates simple Python code based on voice commands
+- _Fixed Code Files_ - Fixes uploaded python files
+- _Internet Search_ - Searches the web for queries and reads back results
+- _Calendar Integration_ - Adds events to Google Calendar and retrieves upcoming events via API
 
 ## Overview
 
@@ -45,9 +46,9 @@ To run this assistant yourself:
 
 ## Pre-requisites:
 
-> * Should have `Ollama` installed with the models used.
-> * Set up Google API here: `https://developers.google.com/calendar/api/quickstart/python` and download c`redentials.json`
-> * Save `Groq` API key in `.env` from here: `https://console.groq.com/playground`
+> - Should have `Ollama` installed with the models used.
+> - Set up Google API here: `https://developers.google.com/calendar/api/quickstart/python` and download c`redentials.json`
+> - Save `Groq` API key in `.env` from here: `https://console.groq.com/playground`
 
 1. Clone this repository
 2. Install dependencies with `pip install -r requirements.txt`
@@ -58,15 +59,16 @@ To run this assistant yourself:
 ## Commands
 
 Here are some example voice commands the assistant can handle:
+
 - "Bye" "Exit" - Exits the Voice Assistant
 - "Add information" - Adds spoken information to the knowledge document
 - "Give information" - Triggers the assistant to converse based on the knowledge document
 - "Upload document" - Uploads a document for the assistant to read and converse based on the uploaded document
 - "Upload image" - Uploads an image for the assistant to read and converse based on the uploaded image
-- "Generate code" - Generates working code based on voice commands and outputs it in a .py file 
+- "Generate code" - Generates working code based on voice commands and outputs it in a .py file
 - "Modify program" - Fixes an uploaded .py file and rewrites with fixed working code
 - "Add event" - Adds an event to the Google Calendar via API
-- "Get my events" - Retrieves the upcoming events from Google Calendar via API 
+- "Get my events" - Retrieves the upcoming events from Google Calendar via API
 
 The assistant can also have general conversations based on the user's input.
 
@@ -85,7 +87,12 @@ There is a lot of room for building on top of this basic framework to create a m
 
 - General Memory can be introduced to store information that can be referenced in future conversations with every model
 - A lot of repetition is there, that can be fixed
-- Many models are being used, Local and API both, that can be imporoved
+- Many models are being used, Local and API both, that can be improved
 - Prompt Engineering for better responses
 - Functionize things the main file
+- Improve the UI
+- Add function calling
+- Prompt ( user text )
+- Better Embeddings ( OpenAI )
+- Gemini Vision
 - so on...

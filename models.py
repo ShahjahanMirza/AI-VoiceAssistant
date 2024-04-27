@@ -103,18 +103,3 @@ def chat_with_image(text, image_path):
 # print(chat_with_image("What is this image about?", image_path))
 
 
-def generate_code(text):
-    """_summary_
-        Use CrewAI to build a code generator.
-    Args:
-        text (_type_): code file
-    """
-    pass
-
-def search(text):
-    """_summary_
-        Use AI to search internet.
-    Args:
-        text (_type_): search result
-    """
-    pass

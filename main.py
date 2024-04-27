@@ -10,6 +10,14 @@ import datetime as dt
 audio_save_path = './audios/audio.wav'
 # calendar = GoogleCalendar()
 
+
+lang_extensions = {
+    "javascript": ".js",
+    "python": ".py",
+    "c++": ".cpp",
+}
+
+
 def user():
     listen(audio_save_path=audio_save_path) # User audio to file
     audio_text = transcribe(audio_file_path=audio_save_path) # User audio file to text
@@ -60,6 +68,7 @@ def main():
                 response = chat_with_doc(user_input, most_similar_chunks = most_common_chunks, paragraphs=paragraphs )
                 speak(response)
         
+        
         # If user want to talk to Image
         elif any(keyword.strip() in user_input.lower() for keyword in ['upload image']): # Talk to Image
             speak('Please Upload image')
@@ -84,10 +93,15 @@ def main():
         elif any(keyword.strip() in user_input.lower() for keyword in ['generate code']): # Generate Code
             speak("Please tell me what you want me to code")
             user_input = user()
+            filename = None
+            for extension in lang_extensions:
+                if any(keyword.strip() in user_input.lower() for keyword in [extension]):
+                    filename = f"generated_{extension}_code" + lang_extensions[extension]
+                    
             result = write_code(user_input)
-            filename = "generated_code.py"
             with open(filename, 'w') as f:
                 f.write(result)
+                
             speak(f"Code Generated in {filename}")
         
         
@@ -107,7 +121,7 @@ def main():
             user_input = user()
             result = search_internet(user_input)
             print("Search Result: ")
-            print(result)
+            print(result) 
             speak(result)
             print("Done...")
         
