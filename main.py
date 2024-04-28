@@ -84,7 +84,7 @@ def main():
                     speak('Closing Image')
                     break
                 else:
-                    response = chat_with_image(user_input, image_path)
+                    response = chat_with_image_gemini(user_input, image_path)
                     speak(response)
             
         

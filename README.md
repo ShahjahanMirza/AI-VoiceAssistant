@@ -95,4 +95,7 @@ There is a lot of room for building on top of this basic framework to create a m
 - Prompt ( user text )
 - Better Embeddings ( OpenAI )
 - Gemini Vision
+- Image capture for talking to image
+- Multiple Document Chat
+- Multiple Document type chat
 - so on...

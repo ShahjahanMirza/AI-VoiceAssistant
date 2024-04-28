@@ -5,9 +5,13 @@ from dotenv import load_dotenv
 import os
 from groq import Groq
 import io
+import google.generativeai as genai
+from PIL import Image
 
 load_dotenv()
 groq_api_key = os.environ["GROQ_API_KEY"]
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+genai.configure(api_key=GOOGLE_API_KEY)
 
 def chat_with_groq_llama(text):
     """
@@ -98,8 +102,31 @@ def chat_with_image(text, image_path):
     
     return response['message']['content']
 
+
+def chat_with_image_gemini(text, image_path):
+    image_path = image_path.replace('\\','/')
+    image = Image.open(image_path)
+    image_bytes = io.BytesIO()
+    image.save(image_bytes, format='PNG')
+    image_bytes.seek(0)
+    
+    image_parts = [
+      {
+        "mime_type": 'image/png',
+        "data": image_bytes.read()  
+      }
+    ]
+    
+    model = genai.GenerativeModel('gemini-pro-vision')
+    response = model.generate_content(
+        [text, image_parts[0]]
+    )
+    
+    return response.text
+
 # # Usage:
 # image_path = r'C:\Users\Shahjahan.DESKTOP-MBDJTPL\Desktop\shaju.png'
 # print(chat_with_image("What is this image about?", image_path))
 
 
+# print(chat_with_image_gemini("what is the gender of the person in the image?",r'C:\Users\Shahjahan.DESKTOP-MBDJTPL\Desktop\shaju.png'))
