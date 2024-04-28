@@ -29,6 +29,7 @@ def main():
     print("Setting up the Assistant...")
     print('Ready...')
         
+        
     while True:
         user_input = user()
         print('User: ', user_input)
@@ -39,11 +40,13 @@ def main():
             break
         
         
+        
         # If user want to add information to the document
         elif any(keyword.strip() in user_input.lower() for keyword in ['add information']): # Add information
             speak('adding information')
             user_input = user()
             most_common_chunks, paragraphs = (update_document(user_input))
+        
         
         
         # If uer wants to talk to document
@@ -53,6 +56,7 @@ def main():
             user_input = user()
             response = chat_with_doc(user_input, most_similar_chunks = most_common_chunks, paragraphs=paragraphs )
             speak(response)
+        
         
         
         #If user wants to talk to document
@@ -68,6 +72,7 @@ def main():
                     break
                 response = chat_with_doc(user_input, most_similar_chunks = most_common_chunks, paragraphs=paragraphs )
                 speak(response)
+        
         
         
         # If user want to talk to Image
@@ -107,6 +112,7 @@ def main():
             os.remove(img_save_path)
         
         
+        
         # If user wants to generate code
         elif any(keyword.strip() in user_input.lower() for keyword in ['generate code']): # Generate Code
             speak("Please tell me what you want me to code")
@@ -133,6 +139,7 @@ def main():
                 speak(f"Code Could not be Fixed and uploaded ")
         
         
+        
         # If the user wants to search the internet
         elif any(keyword.strip() in user_input.lower() for keyword in ['search the internet']): # Search the internet
             speak("Speak your search query: ")
@@ -142,6 +149,8 @@ def main():
             print(result) 
             speak(result)
             print("Done...")
+        
+        
         
         # If user want to add an event to google calendar
         elif any(keyword.strip() in user_input.lower() for keyword in ['add event']): # Add Event
@@ -175,11 +184,13 @@ def main():
             speak("Event added to google calendar")
         
         
+        
         # If user want to get events from google calendar
         elif any(keyword.strip() in user_input.lower() for keyword in ['get my events']): # Add Event
             events = GoogleCalendar().get_events()
             response = chat_with_groq_llama("In a report form, tell me which events do i have and when.  Dont output special characters. use the following events data: " + str(events))
             speak(response)
+        
         
         
         # If user just want to chat normally
