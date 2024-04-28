@@ -24,6 +24,7 @@ Groq
 - _Information Storage_ - Can add spoken information to a knowledge document and have conversations based on it
 - _Document Understanding_ - Analyzes uploaded documents to extract key information
 - _Image Captioning_ - Describes images uploaded by the user
+- _Image Capture_ - Click an image to ask the GPT questions about it
 - _Code Generation_ - Creates simple Python code based on voice commands
 - _Fixed Code Files_ - Fixes uploaded python files
 - _Internet Search_ - Searches the web for queries and reads back results
@@ -65,6 +66,7 @@ Here are some example voice commands the assistant can handle:
 - "Give information" - Triggers the assistant to converse based on the knowledge document
 - "Upload document" - Uploads a document for the assistant to read and converse based on the uploaded document
 - "Upload image" - Uploads an image for the assistant to read and converse based on the uploaded image
+- "Take snapshot" - Open up front camera to take a picture then talk to LLM about it.
 - "Generate code" - Generates working code based on voice commands and outputs it in a .py file
 - "Modify program" - Fixes an uploaded .py file and rewrites with fixed working code
 - "Add event" - Adds an event to the Google Calendar via API

@@ -4,6 +4,7 @@ from doc_models import *
 from coder import *
 from internet_surfer import *
 from event_adder import GoogleCalendar
+from images_test import capture_image
 import os.path
 import datetime as dt
 
@@ -86,7 +87,24 @@ def main():
                 else:
                     response = chat_with_image_gemini(user_input, image_path)
                     speak(response)
-            
+
+
+
+        # If user want to talk to click an image and then talk to it
+        elif any(keyword.strip() in user_input.lower() for keyword in ['take a snapshot', 'take a photo', 'take snapshot', 'take snap shot','take screen shot', 'take a screenshot' ]): # Talk to Image
+            img_save_path = './images/snapshot.png'
+            speak('Please capture image')
+            capture_image()
+            while True:
+                user_input = user()
+                print(user_input)
+                if any(keyword.strip() in user_input.lower() for keyword in ["okay, that's all","Okay that's all", "Okay, that's all",]):
+                    speak('Closing Image')
+                    break
+                else:
+                    response = chat_with_image_gemini(user_input, img_save_path)
+                    speak(response)
+            os.remove(img_save_path)
         
         
         # If user wants to generate code
