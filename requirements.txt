@@ -15,3 +15,4 @@ google_auth_oauthlib
 googleapiclient
 googleapiclient
 google
+opencv-python

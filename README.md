@@ -6,6 +6,7 @@ This is a voice assistant application that can perform various tasks through voi
 
 It is built completely locally.
 Used:
+Gemini Vision
 Llama3
 Gemma
 Qwen
