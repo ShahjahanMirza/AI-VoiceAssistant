@@ -101,4 +101,5 @@ There is a lot of room for building on top of this basic framework to create a m
 - Image capture for talking to image
 - Multiple Document Chat
 - Multiple Document type chat
+- Catch Errors
 - so on...

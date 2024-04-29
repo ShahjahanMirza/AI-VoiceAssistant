@@ -20,15 +20,20 @@ lang_extensions = {
 
 
 def user():
-    listen(audio_save_path=audio_save_path) # User audio to file
-    audio_text = transcribe(audio_file_path=audio_save_path) # User audio file to text
-    return (audio_text)
+    inp = input("'q' to enter text or 'space' to speak ").lower()
+    if inp == 'q':
+        text = input("Enter text: ")
+    else:
+        listen(audio_save_path=audio_save_path) # User audio to file
+        text = transcribe(audio_file_path=audio_save_path) # User audio file to text
+    return (text)
 
 def main():
 
     print("Setting up the Assistant...")
     print('Ready...')
-        
+    print("\n\n")
+
         
     while True:
         user_input = user()
