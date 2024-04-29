@@ -32,7 +32,7 @@ def listen(audio_save_path = audio_save_path):
         sound_file.setframerate(16000)
         sound_file.writeframes(b''.join(frames))
     end = time.time()
-    print("Speech to audio file in: ", end-start)
+    # print("Speech to audio file in: ", end-start)
 
 
 
@@ -43,9 +43,9 @@ def transcribe(audio_file_path = audio_save_path):
     segments, _ = model.transcribe(audio_file_path, beam_size=5, word_timestamps=True)
     transcribed_text = ''.join(segment.text for segment in segments)
     end = time.time()
-    print("Audio Transcribed in: ", end-start)
+    # print("Audio Transcribed in: ", end-start)
     os.remove(audio_file_path)
-    
+    print(transcribed_text)
     return transcribed_text
 
 
@@ -63,5 +63,5 @@ def speak(transcribed_text):
     engine.runAndWait()
     end = time.time()
     
-    print("Text to speech in: ", end-start)
+    # print("Text to speech in: ", end-start)
 

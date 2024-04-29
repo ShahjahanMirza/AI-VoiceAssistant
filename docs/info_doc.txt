@@ -52,3 +52,16 @@ Key points:
 * Date of the event: Thursday
 * Activity: Attending a seminar
 * Location: University
+Event Added Date: April 29, 2024
+Here are the key points:
+
+* You will be traveling to your mom's house
+* Your whole family will be accompanying you
+* The trip will last for 2 days
+Event Added Date: April 29, 2024
+Here are the key points:
+
+* Initially has 10,000 rupees
+* Will return 5,000 rupees to mom
+* Dad will give 10,000 rupees
+* Total amount will be... (no calculation provided)
