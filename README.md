@@ -30,6 +30,7 @@ Groq
 - _Fixed Code Files_ - Fixes uploaded python files
 - _Internet Search_ - Searches the web for queries and reads back results
 - _Calendar Integration_ - Adds events to Google Calendar and retrieves upcoming events via API
+- _Youtube Video_ - Searches YouTube for the video and open it up in the browser
 
 ## Overview
 
@@ -72,6 +73,7 @@ Here are some example voice commands the assistant can handle:
 - "Modify program" - Fixes an uploaded .py file and rewrites with fixed working code
 - "Add event" - Adds an event to the Google Calendar via API
 - "Get my events" - Retrieves the upcoming events from Google Calendar via API
+- "Search Youtube" - Search youtube to open the video in your browser
 
 The assistant can also have general conversations based on the user's input.
 
@@ -94,11 +96,11 @@ There is a lot of room for building on top of this basic framework to create a m
 - Prompt Engineering for better responses
 - Functionize things the main file
 - Improve the UI
-- Add function calling
-- Prompt ( user text )
+- Add function calling - Added
+- Prompt ( user text ) - Added
 - Better Embeddings ( OpenAI )
-- Gemini Vision
-- Image capture for talking to image
+- Gemini Vision - Added
+- Image capture for talking to image - Added
 - Multiple Document Chat
 - Multiple Document type chat
 - Catch Errors
